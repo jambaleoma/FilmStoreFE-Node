@@ -1,9 +1,13 @@
-let express = require("express");
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 let app = express();
 
-app.use(express.static('film-store-fe'));
+app.use('/', express.static('film-store-fe'));
 
-app.listen(2121, () => {
-    console.log(`Example app listening on port 2121`)
+app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`)
 })
