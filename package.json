@@ -4,8 +4,6 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "jsonDB": "json-server --watch db.json",
-    "start": "concurrently 'npm:jsonDB' 'npm:startIndex'",
     "build": "tsc",
     "startIndex": "tsc & node .",
     "test": "echo \"Error: no test specified\" && exit 1",
